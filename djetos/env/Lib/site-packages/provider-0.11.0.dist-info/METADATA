@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: provider
+Version: 0.11.0
+Summary: Common Fate Provider Development Kit
+Author: Common Fate
+Author-email: hello@commonfate.io
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3 (>=1.26.82,<2.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: common-fate-schema (>=0.7.0,<0.8.0)
+Requires-Dist: pydantic (>=1.10.5,<2.0.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: typing-extensions (>=4.5.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Provider Development Kit
+
+Common Fate Provider Development Kit for Python.
+
+## What is a provider?
+
+A Provider is a Python service which provides a consistent API for managing fine-grain permissions.
+
+Managing permissions in cloud providers, SaaS applications, and CI/CD platforms usually requires access to highly sensitive secrets, like administrative API tokens. The Provider framework allows for access to be granted and revoked to these platforms without requiring direct access to these tokens:
+
+![diagram of Provider framework](./docs/provider.drawio.svg)
+
+## What does the Provider Development Kit do?
+
+The Provider Development Kit (PDK) makes it easy to develop and deploy Providers.
+
+```python
+class Provider(provider.Provider):
+    api_url = provider.String()
+
+@access.target()
+class Target:
+    ...
+
+@access.grant()
+def grant(p: Provider, subject: str, target: Target):
+    # perform API calls here to grant access
+    ...
+
+@access.revoke()
+def revoke(p: Provider, subject: str, target: Target):
+    # perform API calls here to revoke access
+    ...
+```
+
+The PDK handles configuration and packaging into a cloud-native function which can be executed by an application.
+
+## Supported runtimes
+
+Currently the supported runtimes for Providers are as follows:
+
+- AWS Lambda
+
+## Provider Schemas
+
+Each Provider has a strongly-typed schema. An example schema is shown below:
+
+```json
+{
+  "audit": {
+    "resourceLoaders": {},
+    "resources": {}
+  },
+  "config": {},
+  "target": {
+    "MyTarget": {
+      "schema": {
+        "first": {
+          "description": "first var",
+          "id": "first",
+          "resourceName": null,
+          "title": "First",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+
+The schema is based on [JSON Schema](https://json-schema.org/) and allows applications using Providers to interpret the available resources and display the appropriate UI.
+

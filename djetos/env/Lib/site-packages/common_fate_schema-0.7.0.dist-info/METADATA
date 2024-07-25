@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: common-fate-schema
+Version: 0.7.0
+Summary: Common Fate core schema types
+License: MIT
+Author: Common Fate
+Author-email: hello@commonfate.io
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pydantic
+Description-Content-Type: text/markdown
+
+# schema
+
+Core Common Fate schema type definitions.
+

@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "2ba0cd6d-ff78-443d-9104-f8d9f4f7d0cb",
+		"name": "etos 1.0 collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31733150"
+	},
+	"item": [
+		{
+			"name": "account opener",
+			"item": [
+				{
+					"name": "otp verified",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type_of_options\": \"otp_verified\",\r\n  \"email_id\": \"mail@gmail.com\",\r\n  \"mobile_no\": 1234567892\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/account_opener/customer_account_opening"
+					},
+					"response": []
+				},
+				{
+					"name": "personal detail save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"sudhakar\",\r\n  \"last_name\": \"P\",\r\n  \"dob\": \"2000-01-01\",\r\n  \"email_id\": \"mail@gmail.com\",\r\n  \"mobile_no\": 1234567892,\r\n  \"post_code\": \"sddsfd\",\r\n  \"post_code_address\": \"sdfs\",\r\n  \"country_citizenship\": \"UK\",\r\n  \"citizenship_others_country_name\": null,\r\n  \"is_employed\": true,\r\n  \"annual_income\": 3500000,\r\n  \"housing_status\": \"R\",\r\n  \"use_etos\": \"for saving only\",\r\n  \"first_payment_come_from\": \"family\",\r\n  \"every_month_deposit_payment\": 10000,\r\n  \"is_tax_resident_outside_uk\": false,\r\n  \"additonal_info_tax_residency\": null,\r\n  \"is_application_processed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/customer_details/customer_account_detail_create"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

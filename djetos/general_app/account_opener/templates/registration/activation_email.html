@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your Account now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .email-header {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .email-body {
+            margin-bottom: 20px;
+        }
+
+        .email-footer {
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff !important;
+            background-color: #1e90ff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Welcome - Activate your account now</h1>
+        </div>
+        <div class="email-body">
+            <p>Thank you for joining us, {{ title }} {{ name }}!</p>
+            <p>To activate your account, please click the button below:</p>
+            <p style="text-align: center;">
+                <a href="{{ activation_link }}" class="button">Activate Your Account</a>
+            </p>
+            <p>If you did not request this activation, please ignore this email.</p>
+        </div>
+        <div class="email-footer">
+            <p>Best Regards,<br>ETOS Team</p>
+            {% load static %}
+            <img src="{% static 'app/images/ETOS-logo.jpg' %}" alt="ETOS Banking Logo" class="logo">
+        </div>
+    </div>
+</body>
+
+</html>

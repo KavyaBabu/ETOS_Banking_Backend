@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="auth">
+                <authState>
+                  <option name="basic">
+                    <basicAuthState>
+                      <option name="pass" value="admin" />
+                      <option name="username" value="admin" />
+                    </basicAuthState>
+                  </option>
+                  <option name="type" value="BASIC" />
+                </authState>
+              </option>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;username&quot;:&quot;admin&quot;,&#10;  &quot;password&quot;: &quot;admin&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="e8295106-e8bd-41f2-860b-d1bd3c32da41" />
+              <option name="method" value="POST" />
+              <option name="name" value="getting tokens" />
+              <option name="url" value="http://127.0.0.1:8000/authentication/token/" />
+            </requestState>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;type_of_options&quot;: &quot;email_validation&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="96522c37-134b-4bb7-bc9b-b1d1deff8abe" />
+              <option name="method" value="POST" />
+              <option name="name" value="account_opener_url" />
+              <option name="url" value="http://127.0.0.1:8000/account_opener/customer_account_opening" />
+            </requestState>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;type_of_options&quot;: &quot;otp_verified&quot;,&#10;  &quot;email_id&quot;: &quot;ponugotisudhakar3@gmail.com&quot;,&#10;  &quot;mobile_no&quot;: &quot;0123456&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="828ab7ac-b941-4e0e-a035-56be92eeb9a5" />
+              <option name="method" value="POST" />
+              <option name="name" value="otp verified" />
+              <option name="url" value="http://127.0.0.1:8000/account_opener/customer_account_opening" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="id" value="1cdda3e4-d81d-4338-b3bd-fd3634694f46" />
+          <option name="name" value="New Collection" />
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="E:\buk projects\Backend\djetos\.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="1770820a-eeeb-4933-95e8-c16d46b4e4b7" />
+  </component>
+</project>

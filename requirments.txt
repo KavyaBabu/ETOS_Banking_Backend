@@ -1,0 +1,24 @@
+python 3.11
+django 4.1
+
+reflex
+
+pip install tea
+pip install oauth2
+pip install django-cors-headers
+pip install django-filter
+pip install drf-yasg
+pip install django-multiselectfield
+pip install django-oauth-toolkit
+pip install psycopg2
+pip install phonenumbers
+pip install setuptools
+pip install Pillow
+
+
+client id : pj33HMyuIyrjd7BpfCecEHQOcSMHDHOoeFaTpwjA
+
+client secret : KxmM7LkmeRYMHsuSc5ZWLWvcoI0t9bkllKXaVTpzh2KK3PHjsrBErGN6I0tJDwsB63pzKGn01oklwkOqeBZLo2GkNSdvfoN6aepDSyLYiWLGpF2Db79a2v8tuJe81Huw
+
+
+
